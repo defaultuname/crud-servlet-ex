@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="1" author="defuname">
+        <createTable tableName="smartphone">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="model" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="price" type="numeric">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="defuname">
+        <insert tableName="smartphone">
+            <column name="model" value="iPhone XR"/>
+            <column name="price" value="799.99"/>
+        </insert>
+
+        <insert tableName="smartphone">
+            <column name="model" value="Xiaomi Redmi Note 10"/>
+            <column name="price" value="199.99"/>
+        </insert>
+
+        <insert tableName="smartphone">
+            <column name="model" value="Nokia 3310"/>
+            <column name="price" value="69.49"/>
+        </insert>
+
+        <insert tableName="smartphone">
+            <column name="model" value="Samsung Galaxy Fold 3"/>
+            <column name="price" value="1999.99"/>
+        </insert>
+
+        <insert tableName="smartphone">
+            <column name="model" value="HTC Desire 810"/>
+            <column name="price" value="549.99"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
