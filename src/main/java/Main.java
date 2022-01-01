@@ -39,8 +39,8 @@ public class Main {
 
         StandardContext ctx = (StandardContext) tomcat.addWebapp("", new File(webappDirLocation).getAbsolutePath());
         logger.info("Configuring app with basedir: " + new File("./" + webappDirLocation).getAbsolutePath());
-        WebappLoader loader = new WebappLoader(Thread.currentThread().getContextClassLoader());
-        ctx.setLoader(loader);
+        WebappLoader webappLoader = new WebappLoader(Thread.currentThread().getContextClassLoader());
+        ctx.setLoader(webappLoader);
 
         File additionWebInfClasses = new File("target/classes");
         WebResourceRoot resources = new StandardRoot(ctx);
