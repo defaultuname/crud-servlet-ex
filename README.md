@@ -1,4 +1,4 @@
-# Crud appication example
+# CRUD application example
 ## Описание
 Реализация CRUD-приложения на Servlet API 4.0.
 В основе — Java 11. Для локального запуска достаточно клонировать репозиторий и иметь установленную Java 11+.
